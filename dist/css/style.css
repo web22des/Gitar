@@ -1260,14 +1260,6 @@ h6 {
   max-width: 50%;
   width: 100%;
   border: 1px solid #000;
-<<<<<<< HEAD
-=======
-}
-
-.form {
-  max-width: 34.375rem;
-  margin: 0 auto;
->>>>>>> 2f56660b70a821740c028e03d1c3d60cfc0df749
   color: #fff;
 }
 
@@ -1351,10 +1343,7 @@ h6 {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-<<<<<<< HEAD
   margin-bottom: 12px;
-=======
->>>>>>> 2f56660b70a821740c028e03d1c3d60cfc0df749
 }
 
 .options__label::before {
@@ -1443,7 +1432,6 @@ body {
   padding: 0 0.5rem;
 }
 
-<<<<<<< HEAD
 .button {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -1466,8 +1454,6 @@ body {
   border-color: #fff;
 }
 
-=======
->>>>>>> 2f56660b70a821740c028e03d1c3d60cfc0df749
 input[type=text],
 input[type=email],
 input[type=tel],
