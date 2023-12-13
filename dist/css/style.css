@@ -9,6 +9,14 @@
 }
 
 @font-face {
+  font-family: icomoon;
+  font-display: swap;
+  src: url("../fonts/icomoon.woff2") format("woff2"), url("../fonts/icomoon.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: Inter;
   font-display: swap;
   src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
@@ -30,6 +38,62 @@
   src: url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
+}
+
+[class*=_icon-]:before {
+  font-family: "icomoon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class*=_icon-]:before {
+  display: inline-block;
+  padding-right: 0.5rem;
+}
+
+._icon-bookmark:before {
+  content: "\e900";
+}
+
+._icon-chat-right-dots:before {
+  content: "\e901";
+}
+
+._icon-geo:before {
+  content: "\e903";
+}
+
+._icon-mail:before {
+  content: "\e904";
+}
+
+._icon-mail-2:before {
+  content: "\e905";
+}
+
+._icon-telephone:before {
+  content: "\e906";
+}
+
+._icon-user:before {
+  content: "\e908";
+}
+
+._icon-whatsapp:before {
+  content: "\ea93";
+}
+
+._icon-telegram:before {
+  content: "\ea95";
+}
+
+._icon-vk:before {
+  content: "\ea98";
 }
 
 * {
@@ -426,6 +490,21 @@ h6 {
   border-radius: 50%;
   background-color: #E0C424;
   margin-bottom: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bem-block-01__card-icon {
+  width: 85%;
+  height: auto;
+  border-radius: 50%;
 }
 
 .bem-block-01__card-title {
@@ -1245,8 +1324,16 @@ h6 {
   }
 }
 
+.no-webp .bem-form-01{
+  background-image: url(../img/bem-form-01/1.jpg); }
+
 .bem-form-01 {
   background-color: #99aef1;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Черный цвет с непрозрачностью 0.5 */
+  background-blend-mode: multiply;
+  /* Умножение цветов для затемнения */
+  color: #ffffff;
 }
 
 .bem-form-01__flex {
@@ -1259,7 +1346,7 @@ h6 {
 .bem-form-01__col {
   max-width: 50%;
   width: 100%;
-  border: 1px solid #000;
+  border: 1px solid #E0C424;
   color: #fff;
 }
 
@@ -1384,6 +1471,49 @@ h6 {
     padding: 0px 20px 0px 20px;
 } */
 
+.bem-form-01__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contact-info li {
+  margin-bottom: 0.5rem;
+}
+
+.contact-info li a:hover {
+  color: #E0C424;
+}
+
+.contact-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 2rem;
+  width: 12.5rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.contact-social li a:hover {
+  color: #E0C424;
+}
+
+.contact-maps {
+  margin-top: 2rem;
+  width: 100%;
+  height: auto;
+}
+
 body {
   background-color: #fff;
   color: #000;
@@ -1438,8 +1568,11 @@ body {
   display: inline-flex;
   padding: 12px 24px;
   border: 2px solid;
+  font-family: "Inter";
   text-transform: uppercase;
   border-radius: 1rem;
+  -webkit-transition: all ease 0.7s;
+  transition: all ease 0.7s;
 }
 
 .button._fw {
@@ -1938,6 +2071,19 @@ textarea.input {
   .bem-block-06__images {
     max-width: 100%;
   }
+
+  .bem-form-01__flex {
+    display: block;
+  }
+
+  .bem-form-01__col {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .bem-form-01__col:last-child {
+    margin-bottom: 0;
+  }
 }
 
 @media (max-width: 37.5em) {
@@ -2021,6 +2167,10 @@ textarea.input {
 }
 
 @media (any-hover: hover) {
+  .button:hover {
+    color: #E0C424;
+  }
+
   .select__option:hover {
     background: #d9d9d9;
   }
@@ -2049,3 +2199,5 @@ textarea.input {
 .webp .bem-block-05__grid-image-nine{ background-image: url(../img/bem-block-05/5.webp); }
 
 .webp .bem-block-05__grid-big-then{ background-image: url(../img/bem-block-05/6.webp); }
+
+.webp .bem-form-01{ background-image: url(../img/bem-form-01/1.webp); }
